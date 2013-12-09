@@ -8,7 +8,6 @@
       simpleFileNames: true
     }
   };
-})(jQuery);
 
   //helper: create img el, append to el identified as
   //imgContainer in the config object passed to fn
@@ -16,8 +15,8 @@
     for (var i = 1; i < config.imgTotal + 1; i++){
       $('<img>').attr({
         id: "image" + i,
-        src: config.imgDir + x + config.imgFormat,
-        title: "Image" + x
+        src: config.imgDir + i + config.imgFormat,
+        title: "Image" + i
       }).appendTo("#" + config.imgContainer).css({display:"none"});
     }
   }
@@ -37,8 +36,8 @@
   $.fn.jLoader = function (configOptional, fileNames){
     var config = $.extend({}, $.jLoader.defaults, configOptional);
     config.imgContainer = this.attr("id");
-    (config.simpleFileNames == true) ? simpleLoad(config) : complexLoad (config, fileNames);
+    (config.simpleFileNames === true) ? simpleLoad(config) : complexLoad (config, fileNames);
     return this;
-  }
+  };
 
 })(jQuery);
