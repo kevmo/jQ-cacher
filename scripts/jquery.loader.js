@@ -17,7 +17,7 @@
         id: "image" + i,
         src: config.imgDir + i + config.imgFormat,
         title: "Image" + i
-      }).appendTo("#" + config.imgContainer).css({display:"none"});
+      }).appendTo("#" + config.imgContainer);
     }
   }
 
@@ -28,7 +28,7 @@
         id: fileNames[i],
         src: config.imgDir + fileNames[i] + config.imgFormat,
         title: fileNames[i]
-      }).appendTo("#" + config.imgContainer).css({display:"none"});
+      }).appendTo("#" + config.imgContainer);
     }
   }
 
