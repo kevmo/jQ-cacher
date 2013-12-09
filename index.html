@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="scripts/jquery.js"></script>
-  <script type="text/javascript" src="scripts/jquery.loader.js"></script>
+  <title> jLoader Demo </title>
 
 </head>
 <body>
+
+  <div id="simpleImageContainer"></div>
+  <div id="complexImageContainer"></div>
+
+  <script type="text/javascript" src="scripts/jquery.js"></script>
+  <script type="text/javascript" src="scripts/jquery.loader.js"></script>
+
+  <script type="text/javascript">
+    $("#simpleImageContainer").jLoader();
+
+    $("#complexImageContainer").jLoader({
+        simpleFileNames: false,
+        imgContainer:"complexImageContainer"
+      }, [
+        "",
+      ]);
+    </script>
 
 </body>
 </html>
